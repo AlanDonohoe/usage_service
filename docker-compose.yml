@@ -1,0 +1,14 @@
+services:
+  api: &main_app
+    ports:
+      # Exposes application port.
+      - "8000:8000"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: usage_service:${USAGE_SERVICE_VERSION:-latest}
+    restart: always
+    env_file:
+      - .env
+    environment:
+      USAGE_SERVICE_HOST: 0.0.0.0
