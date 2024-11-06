@@ -1,6 +1,6 @@
 # usage_service
 
-This project was generated using fastapi_template.
+Provides Usage Metrics
 
 ## Poetry
 
