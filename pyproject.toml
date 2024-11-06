@@ -20,6 +20,7 @@ yarl = "^1"
 ujson = "^5.10.0"
 httptools = "^0.6.1"
 pymongo = "^4.8.0"
+python-multipart = "^0.0.17"
 
 
 [tool.poetry.group.dev.dependencies]
