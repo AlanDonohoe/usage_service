@@ -13,5 +13,7 @@ async def test_usage(client: AsyncClient, fastapi_app: FastAPI) -> None:
     :param fastapi_app: current FastAPI application.
     """
     url = fastapi_app.url_path_for("read_usage")
+
     response = await client.get(url)
+
     assert response.status_code == status.HTTP_200_OK
