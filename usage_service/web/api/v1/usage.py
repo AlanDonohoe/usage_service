@@ -1,8 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter()
-
-router.prefix = "/v1"
+router = APIRouter(prefix="/v1")
 
 
 @router.get("/usage")
