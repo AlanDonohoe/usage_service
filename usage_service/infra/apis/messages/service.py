@@ -16,10 +16,4 @@ class MessageService:  # noqa: D101
 
     @classmethod
     async def _convert_from_message_raw(cls, message_raw: Dict[str, Any]) -> Message:
-        return Message(
-            id=message_raw["id"],
-            credits_used=1,
-            report_id=message_raw.get("report_id"),
-            text=message_raw["text"],
-            timestamp=message_raw["timestamp"],
-        )
+        return Message(**message_raw)
