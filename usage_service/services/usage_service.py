@@ -29,4 +29,4 @@ class UsageService:
 
         reports = await ReportService.call(unique_report_ids)
 
-        return UsageCalculator.call(messages, reports)
+        return UsageCalculator(messages, reports).call()
