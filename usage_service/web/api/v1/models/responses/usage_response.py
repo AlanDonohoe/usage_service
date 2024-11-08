@@ -1,9 +1,14 @@
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
-from usage_service.web.api.v1.models.responses.message_response import MessageResponse
-
 
 class UsageResponse(BaseModel):  # noqa: D101
-    messages: List[MessageResponse]
+    message_id: int
+    credits_used: int
+    report_name: Optional[str]
+    timestamp: str
+
+
+class UsageListResponse(BaseModel):  # noqa: D101
+    usage: List[UsageResponse]
